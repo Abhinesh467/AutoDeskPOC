@@ -149,14 +149,13 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		@SuppressWarnings("unused")
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(By.xpath("(//*[@title='Select table row'])[1]"));
-		WebElement element1 = driver.findElement(By.xpath("(//b[text()='Release Transport Request'])[1]"));
+		WebElement element1 = driver.findElement(By.xpath("(//*[contains(@id,'_Release') and @title='Release Transport Request'])[1]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		Thread.sleep(500); 		
-		driver.findElement(By.xpath("(//*[@title='Select table row'])[1]")).click();
-		Thread.sleep(6000);
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
-		Thread.sleep(500); 
-		driver.findElement(By.xpath("(//b[text()='Release Transport Request'])[1]")).click();
+		element.click();
+		Thread.sleep(7000);
+		js.executeScript("arguments[0].click();", element1);
+		//driver.findElement(By.xpath("(//*[contains(@id,'_Release') and @title='Release Transport Request'])[1]")).click();
 		Thread.sleep(3000);
 		driver.switchTo().defaultContent();
 		Thread.sleep(2000);
