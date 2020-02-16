@@ -155,6 +155,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		driver.findElement(By.xpath("(//*[@title='Select table row'])[1]")).click();
 		Thread.sleep(6000);
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
+		Thread.sleep(500); 
 		driver.findElement(By.xpath("(//b[text()='Release Transport Request'])[1]")).click();
 		Thread.sleep(3000);
 		driver.switchTo().defaultContent();
