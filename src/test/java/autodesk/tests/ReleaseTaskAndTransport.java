@@ -47,13 +47,14 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		Thread.sleep(5000);		
 		System.out.println("First Test");		
 		Thread.sleep(5000);
+		Robot r = new Robot();
 		Actions actions = new Actions(driver);	
 		actions.doubleClick(driver.findElement(By.name("ND5"))).build().perform();		
 		Thread.sleep(2000);
 		driver.findElement(By.id("100")).sendKeys(prop.getProperty("DevUser"));
-		Robot r = new Robot();
-		r.keyPress(java.awt.event.KeyEvent.VK_DOWN);
-		r.keyRelease(java.awt.event.KeyEvent.VK_DOWN);
+		Thread.sleep(1000);		
+		r.keyPress(KeyEvent.VK_TAB);
+		r.keyRelease(KeyEvent.VK_TAB);
 		Thread.sleep(2000);
 		driver.findElement(By.id("100")).sendKeys(prop.getProperty("DevPSW"));
 		r.keyPress(java.awt.event.KeyEvent.VK_ENTER);
@@ -63,8 +64,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		r.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 		r.keyRelease(java.awt.event.KeyEvent.VK_ENTER);
 		Thread.sleep(2000);
-		driver.findElement(By.id("100")).sendKeys(prop.getProperty("FunctionalModule"));		
-
+		driver.findElement(By.id("100")).sendKeys(prop.getProperty("FunctionalModule"));
 		r.keyPress(KeyEvent.VK_F8);
 		r.keyRelease(KeyEvent.VK_F8);
 		Thread.sleep(5000);
@@ -76,8 +76,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		driver.findElement(By.id("100")).sendKeys(prop.getProperty("TRT"));	
 		r.keyPress(KeyEvent.VK_TAB);
 		r.keyRelease(KeyEvent.VK_TAB);
-		driver.findElement(By.id("100")).sendKeys("X");	
-		
+		driver.findElement(By.id("100")).sendKeys("X");			
 		r.keyPress(KeyEvent.VK_F8);
 		r.keyRelease(KeyEvent.VK_F8);
 		Thread.sleep(3000);
@@ -90,17 +89,14 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		r.keyPress(KeyEvent.VK_F3);
 		r.keyRelease(KeyEvent.VK_SHIFT);		
 		r.keyRelease(KeyEvent.VK_F3);
-
 		Thread.sleep(3000);
 		r.keyPress(KeyEvent.VK_SHIFT);
 		r.keyPress(KeyEvent.VK_F3);
 		r.keyRelease(KeyEvent.VK_SHIFT);		
-		r.keyRelease(KeyEvent.VK_F3);
-		 
+		r.keyRelease(KeyEvent.VK_F3);		 
 		Thread.sleep(2000);
 		r.keyPress(KeyEvent.VK_TAB);
 		r.keyRelease(KeyEvent.VK_TAB);
-
 		r.keyPress(java.awt.event.KeyEvent.VK_ENTER);
 		r.keyRelease(java.awt.event.KeyEvent.VK_ENTER);
 		
