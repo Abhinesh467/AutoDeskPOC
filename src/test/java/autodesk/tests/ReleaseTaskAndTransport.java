@@ -145,11 +145,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		driver.findElement(By.xpath("//a[text()='"+prop.getProperty("CharmTID")+"']")).click();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//b[text()='Edit'])[1]")));
 		driver.findElement(By.xpath("(//b[text()='Edit'])[1]")).click();
-		Thread.sleep(4000);
-		@SuppressWarnings("unused")
 		Thread.sleep(4000);	
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,100)");
 		WebElement element = driver.findElement(By.xpath("(//*[@title='Select table row'])[1]"));				
 		Thread.sleep(500); 		
 		element.click();
