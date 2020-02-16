@@ -155,6 +155,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		Thread.sleep(500); 		
 		element.click();
 		Thread.sleep(7000);
+		jse.executeScript("scroll(0, -70);");
 		actions.moveToElement(element1).build().perform();
 		element1.click();
 		Thread.sleep(3000);
