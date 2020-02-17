@@ -195,10 +195,8 @@ public class ABAPReleaseTaskAndTransport extends AutodeskBaseUtility{
 		driver.findElement(By.xpath("//*[@id='LOGOFF']")).click();		
 		driver.switchTo().alert().accept();
 		Thread.sleep(5000);
-		driver.switchTo().defaultContent();
-		Thread.sleep(5000);
 		driver.quit();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 	}
 	
