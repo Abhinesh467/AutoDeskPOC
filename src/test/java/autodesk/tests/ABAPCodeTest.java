@@ -38,7 +38,7 @@ public class ABAPCodeTest extends AutodeskBaseUtility{
 		initialiseConfig();
 		report = new ExtentReports(System.getProperty("user.dir")+"\\POCReports\\"+prop.getProperty("ProgramName")+"ABAPDEV_FIORIProjectResults.html");	
 		options = new DesktopOptions();
-		options.setApplicationPath(prop.getProperty("SAPLogin"));
+		options.setApplicationPath(prop.getProperty("C:\\Program Files (x86)\\SAP\\FrontEnd\\SapGui\\saplogon.exe"));
 		File driverPath = new File(System.getProperty("user.dir")+"//Winium.Desktop.Driver.exe");
 		WiniumDriverService service = new WiniumDriverService.Builder().usingDriverExecutable(driverPath).usingPort(9999).withVerbose(true).withSilent(false).buildDesktopService();
 		try {				
