@@ -32,15 +32,15 @@ public class ABAPQACodeTest extends AutodeskBaseUtility{
 	public static WiniumDriverService service;
 	public static String ABAPQAPassPercentage;
 	
-	public static String DBData  = "C:\\Users\\Ajay Tomala\\Desktop\\RepoFiles\\AutodeskPOC\\DBData";
-	public static String APPData = "C:\\Users\\Ajay Tomala\\Desktop\\RepoFiles\\AutodeskPOC\\APPData\\";
+	public static String DBData  = "C:\\Program Files (x86)\\Jenkins\\workspace\\ABAP-CICD\\DBData";
+	public static String APPData = "C:\\Program Files (x86)\\Jenkins\\workspace\\ABAP-CICD\\APPData\\";
 	
 	@BeforeClass
 	public static void driverInvoke() throws Exception{
 		initialiseConfig();
 		report = new ExtentReports(System.getProperty("user.dir")+"\\POCReports\\"+prop.getProperty("ProgramName")+"ABAPQA_FIORIProjectResults.html");	
 		options = new DesktopOptions();
-		options.setApplicationPath("C:\\Users\\Ajay Tomala\\git\\FIORProject\\FIORProject\\SAP Logon.lnk");
+		options.setApplicationPath("C:\\Program Files (x86)\\SAP\\FrontEnd\\SapGui\\saplogon.exe");
 		File driverPath = new File(System.getProperty("user.dir")+"//Winium.Desktop.Driver.exe");
 		service = new WiniumDriverService.Builder().usingDriverExecutable(driverPath).usingPort(9999).withVerbose(true).withSilent(false).buildDesktopService();
 		try {				
