@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+  <!-- <test name="LocalTest">
+    <classes>
+      <class name="autodesk.tests.LocalFIORI"/>
+    </classes>
+  </test> -->
+   <test name="DEVTest">
+    <classes>
+      <class name="autodesk.tests.DevFIORI"/>
+    </classes>
+  </test>
+  <!--  <test name="QATest">
+    <classes>
+      <class name="autodesk.tests.QAFIORI"/>
+    </classes>
+  </test> -->
+</suite>
