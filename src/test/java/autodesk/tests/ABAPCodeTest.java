@@ -30,8 +30,8 @@ public class ABAPCodeTest extends AutodeskBaseUtility{
 	
 	
 	
-	public static String DBData  = "C:\\Users\\Ajay Tomala\\Desktop\\RepoFiles\\AutodeskPOC\\DBData";
-	public static String APPData = "C:\\Users\\Ajay Tomala\\Desktop\\RepoFiles\\AutodeskPOC\\APPData\\";
+	public static String DBData  = "C:\\Program Files (x86)\\Jenkins\\workspace\\ABAP-CICD\\DBData";
+	public static String APPData = "C:\\Program Files (x86)\\Jenkins\\workspace\\ABAP-CICD\\APPData\\";
 	
 	@BeforeClass
 	public static void driverInvoke() throws Exception{
