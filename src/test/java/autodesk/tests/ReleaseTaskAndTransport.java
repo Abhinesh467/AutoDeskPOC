@@ -198,9 +198,7 @@ public class ReleaseTaskAndTransport extends AutodeskBaseUtility {
 		driver.findElement(By.xpath("//*[@id='LOGOFF']")).click();		
 		driver.switchTo().alert().accept();
 		Thread.sleep(5000);
-		driver.switchTo().defaultContent();
-		Thread.sleep(5000);
-		driver.close();
+		driver.quit();
 	}
 
 }
